@@ -1,6 +1,6 @@
 # 🛡️ Phishing Detection with Hybrid Model (v2)
 
-A hybrid phishing detection system combining Rule-Based methods, Classical Machine Learning, and Deep Learning models. This full-stack application is developed using **Flask** (backend) and **React** (frontend), capable of detecting phishing attempts via email text or URLs in English and Turkish.  
+A hybrid phishing detection system combining Rule-Based methods, Classical Machine Learning, and Deep Learning models. This full-stack application is developed using **Flask** (backend) and **React** (frontend), which are capable of detecting phishing attempts via email text or URLs in English and Turkish.  
 
 > ✅ Supports both textual and URL-based inputs  
 > 🔐 Smart detection: Automatically selects relevant models based on input  
@@ -38,21 +38,23 @@ phishing-detection-hybrid-v2/
 
 ### 🔧 Backend (Flask)
 
-    ```
+```
     cd backend
     pip install -r requirements.txt
     python src/inference/inference_service.py
-    ```
+
+```
 
 ---
 
 ## 🌐 Frontend (React)
 
-    ```
+```
     cd frontend
     npm install
     npm start
-    ```
+
+```
 
 ---
 
@@ -158,17 +160,17 @@ Due to GitHub file size limits, the following are excluded:
 
 Add this to your .gitignore:
 
-     ```
+```
     /backend/data
     /backend/models
     /frontend/node_modules
-
+```
  ---
 
 ## 🧪 Dataset Preparation
 Download and merge datasets manually:
     
-    ```
+```
     import pandas as pd
     
     email_df = pd.read_csv("Phishing_Email.csv")
@@ -178,7 +180,7 @@ Download and merge datasets manually:
     merged = pd.concat([email_df, url_df, extra_df], ignore_index=True)
     merged = merged[["text", "label"]]  # Ensure uniform schema
     merged.to_csv("final_dataset.csv", index=False)
-
+```
  ---
 
 ## 🎯 How It Works
