@@ -1,0 +1,22 @@
+# MODELS (Büyük boyutlu model dosyaları)
+backend/models/
+backend/data/
+!backend/models/README.md
+
+# RAW & PROCESSED DATA
+backend/data/raw/
+backend/data/processed/
+backend/data/embeddings/
+
+# PYTHON BYTECODE
+__pycache__/
+*.py[cod]
+
+# LOGS / TEMP FILES
+*.log
+
+# NODE MODULES (React tarafı)
+frontend/node_modules/
+frontend/build/
+# ENV FILES (eğer varsa)
+*.env
