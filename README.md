@@ -81,7 +81,9 @@ All datasets were cleaned and preprocessed to contain only text and label column
 
 ## 📈 Model Performance
 All models were evaluated using 80/20 train-test split and SMOTE for balancing.
+
 ✉️ Email Models
+
 | Model        | Accuracy | F1-Score |
 | ------------ | -------- | -------- |
 | Naive Bayes  | 92.1%    | 91.4%    |
@@ -108,8 +110,6 @@ All models were evaluated using 80/20 train-test split and SMOTE for balancing.
 🔄 Animated loading spinner
 
 📋 Results from each model + final ensemble output
-
-<img src="https://github.com/zgokceaynaci/phishing-detection-hybrid-v2/assets/ui_preview.png" width="700" alt="UI preview" />
 
  ---
 
