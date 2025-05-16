@@ -19,15 +19,17 @@ Phishing remains one of the most common and dangerous forms of cyberattacks. Thi
 ---
 
 ## 🗂️ Project Structure
+
 phishing-detection-hybrid-v2/
-├── backend/                  # Flask backend - inference, training scripts
-│   ├── src/
-│   │   ├── datasets/         # Data cleaning utilities
-│   │   └── inference/        # Main prediction logic
-│   ├── data/                 # Raw & processed datasets (excluded via .gitignore)
-│   └── models/               # Trained model files (excluded via .gitignore)
-├── frontend/                 # React frontend - UI logic
-│   └── src/components/       # Text input and animated prediction results
+├── backend/                # Flask backend - inference and training scripts
+│   └── src/
+│       ├── datasets/       # Data cleaning utilities
+│       └── inference/      # Main prediction logic
+├── data/                   # Raw & processed datasets (excluded via .gitignore)
+├── models/                 # Trained model files (excluded via .gitignore)
+├── frontend/               # React frontend - UI logic
+│   └── src/
+│       └── components/     # Text input and animated prediction results
 └── README.md
 
 ---
