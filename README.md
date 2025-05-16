@@ -68,7 +68,9 @@ The detection process consists of three layers:
 ---
 
 ## 📂 Datasets Used
+
 All datasets were cleaned and preprocessed to contain only text and label columns.
+
 | Source                   | Description             | Link                                                                               |
 | ------------------------ | ----------------------- | ---------------------------------------------------------------------------------- |
 | Phishing Email Dataset   | English spam emails     | [Kaggle](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset) |
@@ -76,30 +78,48 @@ All datasets were cleaned and preprocessed to contain only text and label column
 | Phishing Emails Dataset  | Additional mail samples | [Kaggle](https://www.kaggle.com/datasets/subhajournal/phishingemails)              |
 | Turkish Phishing Dataset | Manually labeled emails | Local dataset                                                                      |
 
+| File                                                         | Source                          | Records | Status    |
+| ------------------------------------------------------------ | ------------------------------- | ------- | --------- |
+| `CEAS_08.csv` → `email_dataset_cleaned.csv`                  | CEAS dataset                    | 39,126  | ✅ Success |
+| `Phishing_Email.csv` → `email_detection_cleaned.csv`         | Kaggle                          | 18,634  | ✅ Success |
+| `phishing_site_urls.csv` → `url_dataset_cleaned.csv`         | Kaggle                          | 549,346 | ✅ Success |
+| `turkish_phishing_dataset.csv` → `turkish_email_cleaned.csv` | Manually labeled                | 7,504   | ✅ Success |
+| `email_combined_cleaned.csv`                                 | Merged (CEAS + Phishing\_Email) | 57,760  | ✅ Great   |
 
 ---
 
 ## 📈 Model Performance
 All models were evaluated using 80/20 train-test split and SMOTE for balancing.
 
-✉️ Email Models
+✉️ Email-Based (Combined Dataset)
 
-| Model        | Accuracy | F1-Score |
-| ------------ | -------- | -------- |
-| Naive Bayes  | 92.1%    | 91.4%    |
-| LightGBM     | 94.7%    | 94.2%    |
-| LSTM + GloVe | 96.3%    | 95.9%    |
+| Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+| ------------------ | -------- | --------- | ------ | -------- | ------- |
+| LogisticRegression | 0.9945   | 0.9968    | 0.9934 | 0.9951   | 0.9996  |
+| RandomForest       | 0.9955   | 0.9961    | 0.9959 | 0.9960   | 0.9996  |
+| ExtraTrees         | 0.9960   | 0.9982    | 0.9947 | 0.9964   | 0.9998  |
+| LightGBM           | 0.9969   | 0.9968    | 0.9977 | 0.9973   | 0.9999  |
+| NaiveBayes         | 0.9808   | 0.9969    | 0.9686 | 0.9826   | 0.9988  |
+| LSTM + GloVe       | 96.3%    | 95.9%     |
 
-🔗 URL Models
-| Model            | Accuracy | F1-Score |
-| ---------------- | -------- | -------- |
-| LightGBM         | 97.4%    | 96.8%    |
-| LSTM + Tokenizer | 98.1%    | 97.7%    |
+
+🔗 URL-Based Models
+
+| Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC | Time (s) |
+| ------------------ | -------- | --------- | ------ | -------- | ------- | -------- |
+| LogisticRegression | 0.9386   | 0.8971    | 0.8860 | 0.8915   | 0.9833  | 6.39     |
+| RandomForest       | 0.9447   | 0.9124    | 0.8916 | 0.9019   | 0.9863  | 221.56   |
+| ExtraTrees         | 0.9469   | 0.9177    | 0.8936 | 0.9055   | 0.9864  | 366.55   |
+| LightGBM           | 0.9009   | 0.8347    | 0.8130 | 0.8237   | 0.9589  | 31.24    |
+| NaiveBayes         | 0.9247   | 0.8517    | 0.8905 | 0.8706   | 0.9812  | 0.06     |
+| LSTM + Tokenizer   | 98.1%    | 97.7%     |
+
 
 🇹🇷 Turkish Dataset
 | Model       | Accuracy | F1-Score |
 | ----------- | -------- | -------- |
 | Naive Bayes | 90.2%    | 89.0%    |
+
 
 ---
 
@@ -116,11 +136,12 @@ All models were evaluated using 80/20 train-test split and SMOTE for balancing.
 ## 🔐 Smart Detection Logic
 Based on input content:
 
-🟢 If it’s a URL → Only URL models + Rule-Based + Ensemble
+| Input Type         | Models Used                           |
+| ------------------ | ------------------------------------- |
+| URL                | Rule-Based + URL ML + URL DL + Voting |
+| Turkish Text       | Rule-Based + TR NB + Voting           |
+| English/Other Text | Rule-Based + All Models + Voting      |
 
-🔵 If it’s Turkish → Only Turkish NB + Rule-Based + Ensemble
-
-⚪ If English text → All models (Email + CEAS + Rule-Based + Ensemble)
 
  ---
 
