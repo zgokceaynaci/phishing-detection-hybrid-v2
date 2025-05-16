@@ -36,7 +36,7 @@ phishing-detection-hybrid-v2/
 
 ### 🔧 Backend (Flask)
 
-    ```bash
+    ```
     cd backend
     pip install -r requirements.txt
     python src/inference/inference_service.py
@@ -45,7 +45,7 @@ phishing-detection-hybrid-v2/
 
 ## 🌐 Frontend (React)
 
-    ```bash
+    ```
     cd frontend
     npm install
     npm start
@@ -133,7 +133,7 @@ Due to GitHub file size limits, the following are excluded:
 
 Add this to your .gitignore:
 
-     ```bash
+     ```
     /backend/data
     /backend/models
     /frontend/node_modules
@@ -143,16 +143,16 @@ Add this to your .gitignore:
 ## 🧪 Dataset Preparation
 Download and merge datasets manually:
     
-    ```bash
-import pandas as pd
-
-email_df = pd.read_csv("Phishing_Email.csv")
+    ```
+    import pandas as pd
+    
+    email_df = pd.read_csv("Phishing_Email.csv")
     url_df = pd.read_csv("phishing_site_urls.csv")
     extra_df = pd.read_csv("phishingemails.csv")
-
-merged = pd.concat([email_df, url_df, extra_df], ignore_index=True)
-merged = merged[["text", "label"]]  # Ensure uniform schema
-merged.to_csv("final_dataset.csv", index=False)
+    
+    merged = pd.concat([email_df, url_df, extra_df], ignore_index=True)
+    merged = merged[["text", "label"]]  # Ensure uniform schema
+    merged.to_csv("final_dataset.csv", index=False)
 
  ---
 
