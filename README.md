@@ -143,17 +143,16 @@ Add this to your .gitignore:
 ## 🧪 Dataset Preparation
 Download and merge datasets manually:
     
-```bash
+    ```bash
+import pandas as pd
 
-    import pandas as pd
-
-    email_df = pd.read_csv("Phishing_Email.csv")
+email_df = pd.read_csv("Phishing_Email.csv")
     url_df = pd.read_csv("phishing_site_urls.csv")
     extra_df = pd.read_csv("phishingemails.csv")
 
-    merged = pd.concat([email_df, url_df, extra_df], ignore_index=True)
-    merged = merged[["text", "label"]]  # Ensure uniform schema
-    merged.to_csv("final_dataset.csv", index=False)
+merged = pd.concat([email_df, url_df, extra_df], ignore_index=True)
+merged = merged[["text", "label"]]  # Ensure uniform schema
+merged.to_csv("final_dataset.csv", index=False)
 
  ---
 
