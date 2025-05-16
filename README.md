@@ -19,7 +19,7 @@ Phishing remains one of the most common and dangerous forms of cyberattacks. Thi
 ---
 
 ## 🗂️ Project Structure
-
+```
 phishing-detection-hybrid-v2/
 ├── backend/                # Flask backend - inference and training scripts
 │   └── src/
@@ -31,7 +31,7 @@ phishing-detection-hybrid-v2/
 │   └── src/
 │       └── components/     # Text input and animated prediction results
 └── README.md
-
+```
 ---
 
 ## 🛠️ Installation
