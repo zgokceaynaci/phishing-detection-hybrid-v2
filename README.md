@@ -42,6 +42,7 @@ phishing-detection-hybrid-v2/
     cd backend
     pip install -r requirements.txt
     python src/inference/inference_service.py
+    ```
 
 ---
 
@@ -51,6 +52,7 @@ phishing-detection-hybrid-v2/
     cd frontend
     npm install
     npm start
+    ```
 
 ---
 
