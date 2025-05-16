@@ -1,0 +1,35 @@
+
+matplotlib
+
+# Core
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.8.4
+scikit-learn==1.4.1.post1
+seaborn==0.13.2
+
+# Text Processing
+nltk==3.8.1
+textblob==0.18.0.post0
+
+# Vectorization
+scipy==1.13.0
+
+# ML Models
+xgboost==2.0.3
+lightgbm==4.3.0
+imblearn==0.0
+imbalanced-learn==0.12.0
+
+# Deep Learning
+tensorflow==2.15.0
+keras==2.15.0
+
+# Utils
+tqdm==4.66.2
+joblib==1.4.2
+pickle-mixin==1.0.2
+
+# Optional (görselleştirme ve notebook için)
+jupyterlab
+notebook
