@@ -97,19 +97,74 @@ All datasets were cleaned and preprocessed to contain only text and label column
 ## 📈 Model Performance
 All models were evaluated using 80/20 train-test split and SMOTE for balancing.
 
-✉️ Email-Based (Combined Dataset)
+✉️ Email-Based (Combined Dataset) 
+Merged (CEAS + Phishing_Email)
+
+ML Parts:
+📄 Loaded dataset. Shape: (57760, 2)
+✅ SMOTE applied. Class distribution:
+label
+1    23313
+0    23313
 
 | Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC |
 | ------------------ | -------- | --------- | ------ | -------- | ------- |
-| LogisticRegression | 0.9945   | 0.9968    | 0.9934 | 0.9951   | 0.9996  |
-| RandomForest       | 0.9955   | 0.9961    | 0.9959 | 0.9960   | 0.9996  |
-| ExtraTrees         | 0.9960   | 0.9982    | 0.9947 | 0.9964   | 0.9998  |
-| LightGBM           | 0.9969   | 0.9968    | 0.9977 | 0.9973   | 0.9999  |
-| NaiveBayes         | 0.9808   | 0.9969    | 0.9686 | 0.9826   | 0.9988  |
-| LSTM + GloVe       | 96.3%    | 95.9%     |
+| LogisticRegression | 0.9829   | 0.9817    | 0.9844 | 0.9830   | 0.9984  |
+| RandomForest       | 0.9788   | 0.9849    | 0.9729 | 0.9789   | 0.9979  |
+| ExtraTrees         | 0.9790   | 0.9893    | 0.9688 | 0.9789   | 0.9985  |
+| LightGBM           | 0.9819   | 0.9789    | 0.9854 | 0.9821   | 0.9987  |
+| NaiveBayes         | 0.9574   | 0.9800    | 0.9346 | 0.9568   | 0.9952  |
+
+
+Deep learning Parts:
+
+| Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+| ------------------ | -------- | --------- | ------ | -------- | ------- |
+| LSTM + GloVe       | 0.9944   | 0.9963    | 0.9936 | 0.9950   | 0.9945  |
+
+✉️ email_detection_cleaned:
+
+ML Parts:
+📄 Loaded dataset. Shape: (18634, 2)
+🔍 Label distribution:
+ label
+0    11322
+1     7312
+🔍 Training label distribution:
+ label
+0    9057
+1    5850
+✅ SMOTE applied. Class distribution:
+label
+0    9057
+1    9057
+
+| Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC | Time (sec)|
+| ------------------ | -------- | --------- | ------ | -------- | ------- | --------- |
+| LogisticRegression | 0.9635   | 0.9288    | 0.9822 | 0.9548   | 0.9941  | 0.33      |
+| RandomForest       | 0.9616   | 0.9353    | 0.9692 | 0.9520   | 0.9913  | 6.36      |
+| ExtraTrees         | 0.9662   | 0.9471    | 0.9679 | 0.9574   | 0.9927  | 7.46      |
+| LightGBM           | 0.9614   | 0.9263    | 0.9795 | 0.9521   | 0.9943  | 7.48      |
+| NaiveBayes         | 0.9573   | 0.9261    | 0.9685 | 0.9468   | 0.9922  | 0.00      |
+
+Deep learning Parts:
+
+| Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+| ------------------ | -------- | --------- | ------ | -------- | ------- |
+| LSTM + GloVe       | 0.9047   | 0.8991    | 0.8529 | 0.8754   | 0.8956  |
 
 
 🔗 URL-Based Models
+ML Parts:
+📄 Loaded dataset. Shape: (549346, 2)
+🔍 Label distribution:
+ label
+0    392924
+1    156422
+✅ SMOTE applied. Class distribution:
+ label
+0    314339
+1    314339
 
 | Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC | Time (s) |
 | ------------------ | -------- | --------- | ------ | -------- | ------- | -------- |
@@ -118,10 +173,18 @@ All models were evaluated using 80/20 train-test split and SMOTE for balancing.
 | ExtraTrees         | 0.9469   | 0.9177    | 0.8936 | 0.9055   | 0.9864  | 366.55   |
 | LightGBM           | 0.9009   | 0.8347    | 0.8130 | 0.8237   | 0.9589  | 31.24    |
 | NaiveBayes         | 0.9247   | 0.8517    | 0.8905 | 0.8706   | 0.9812  | 0.06     |
-| LSTM + Tokenizer   | 98.1%    | 97.7%     |
+
+Deep learning Parts:
+
+| Model              | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+| ------------------ | -------- | --------- | ------ | -------- | ------- |
+| LSTM + GloVe       | 0.9407   | 0.9374    | 0.8486 | 0.8908   | 0.9130  |
 
 
 🇹🇷 Turkish Dataset
+
+Due to the relatively small size of the Turkish phishing dataset (7,504 records), using complex machine learning or deep learning architectures was not effective or reliable. Thus, we opted for a Naive Bayes classifier, which provided satisfactory performance for the limited data available.
+
 | Model       | Accuracy | F1-Score |
 | ----------- | -------- | -------- |
 | Naive Bayes | 90.2%    | 89.0%    |
