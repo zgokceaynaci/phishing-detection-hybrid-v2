@@ -128,8 +128,51 @@ All models were evaluated using 80/20 train-test split and SMOTE for balancing.
 
 
 ---
+## 🖥️ User Interface Preview
 
-##  🖥️ User Interface Preview
+Below are screenshots from the phishing detection tool interface. They showcase spam/ham inputs, model outputs, and visual components.  
+These images are added via GitHub issue uploads for clarity.  
+
+---
+
+### 📥 Sample Spam Input
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6b51b5c4-fdfb-4f65-9abe-dde67aa3dce8" width="600" alt="Spam Email Input Screen">
+</p>
+
+---
+
+### 📊 Prediction Output View (Model-wise Results)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/742b4c15-20f8-491b-9add-af1f97297742" width="600" alt="Ensemble Output Results">
+</p>
+
+---
+
+### 🟢 Non-Spam (Ham) Input Sample
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/678d20f8-d3db-4b28-881e-77498bfb979c" width="600" alt="Ham Email Input Screen">
+</p>
+
+---
+
+### 🔗 URL-Based Detection Sample
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3552f802-b95a-4a17-955e-f281cf1a3fff" width="600" alt="URL Input Detection">
+</p>
+
+---
+
+### 🇹🇷 Turkish Text Detection Example
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/332bdaa7-0a93-4f36-95d4-805c4a2a76e9" width="600" alt="Turkish Email Sample Detection">
+</p>
+
 
 ✍️ Clean input interface
 
