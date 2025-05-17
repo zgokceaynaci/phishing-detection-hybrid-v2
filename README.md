@@ -142,16 +142,9 @@ These images are added via GitHub issue uploads for clarity.
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/332bdaa7-0a93-4f36-95d4-805c4a2a76e9" width="600" alt="Turkish Email Sample Detection">
-</p>
-
----
-
-### 📊 Prediction Output View (Model-wise Results)
-
-<p align="center">
   <img src="https://github.com/user-attachments/assets/742b4c15-20f8-491b-9add-af1f97297742" width="600" alt="Ensemble Output Results">
 </p>
+
 
 ---
 
