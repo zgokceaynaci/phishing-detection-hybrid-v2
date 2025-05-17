@@ -138,7 +138,11 @@ These images are added via GitHub issue uploads for clarity.
 ### 📥 Sample Spam Input
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6b51b5c4-fdfb-4f65-9abe-dde67aa3dce8" width="600" alt="Spam Email Input Screen">
+  <img src="https://github.com/user-attachments/assets/332bdaa7-0a93-4f36-95d4-805c4a2a76e9" width="600" alt="Turkish Email Sample Detection">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/332bdaa7-0a93-4f36-95d4-805c4a2a76e9" width="600" alt="Turkish Email Sample Detection">
 </p>
 
 ---
@@ -154,12 +158,16 @@ These images are added via GitHub issue uploads for clarity.
 ### 🟢 Non-Spam (Ham) Input Sample
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/678d20f8-d3db-4b28-881e-77498bfb979c" width="600" alt="Ham Email Input Screen">
+  <img src="https://github.com/user-attachments/assets/6b51b5c4-fdfb-4f65-9abe-dde67aa3dce8" width="600" alt="Spam Email Input Screen">
 </p>
 
 ---
 
 ### 🔗 URL-Based Detection Sample
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/678d20f8-d3db-4b28-881e-77498bfb979c" width="600" alt="Ham Email Input Screen">
+</p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3552f802-b95a-4a17-955e-f281cf1a3fff" width="600" alt="URL Input Detection">
@@ -169,9 +177,7 @@ These images are added via GitHub issue uploads for clarity.
 
 ### 🇹🇷 Turkish Text Detection Example
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/332bdaa7-0a93-4f36-95d4-805c4a2a76e9" width="600" alt="Turkish Email Sample Detection">
-</p>
+<img width="761" alt="Screenshot 2025-05-16 at 17 28 47" src="https://github.com/user-attachments/assets/9241b598-8325-4fb3-9ab2-a8006d9b1126" />
 
 
 ✍️ Clean input interface
